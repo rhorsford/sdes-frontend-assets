@@ -1,0 +1,128 @@
+// ***** Start Dashboard File upload components ***** //
+
+a.delete {
+  cursor: pointer;
+  float:right;
+}
+
+.upload_success {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.dropzone {
+  border: 3px dashed #bdc0c2;
+  background-color: #fff;
+  width: auto;
+  color: #000000;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px 0;
+  text-align: left;
+
+  &.dragover {
+    border-color: #005ea5;
+  }
+}
+
+.draganddroptable {
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.fileinput-label {
+  color: #bdc0c2;
+  font-weight: normal;
+  font-size: 16px;
+  float: right;
+  margin-top: .5em;
+}
+
+.fileinput-button {
+  position: relative;
+  overflow: hidden;
+  background: #dee0e2;
+}
+.fileinput-button input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  -ms-filter:  'alpha(opacity=0)';
+  // font-size: 200px;
+  direction: ltr;
+  cursor: pointer;
+}
+
+.statusbar2 {
+  border-top: none;
+  border-bottom:1px solid #BFC1C3;
+  border-left: 5px solid #fff;
+  min-height: 25px;
+  width: auto;
+  padding: 10px 0px 10px 0px;
+  vertical-align: top;
+  font-size: 16px;
+}
+
+.statusbar2-title {
+  font-weight:600;
+  }
+
+.filename2 {
+  display: inline-block;
+  vertical-align: top;
+  width:365px;
+  min-height:25px;
+  max-height: 50px;
+  overflow: hidden;
+  }
+
+  .filename3 {
+  display: inline-block;
+  vertical-align: top;
+  width:350px;
+  min-height:25px;
+  max-height: 50px;
+  overflow: hidden;
+  }
+
+  .filenameh {
+    font-weight: bold;
+    font-size: medium;
+    }
+
+.actionsh {
+  font-weight: bold;
+  font-size: medium;
+  float: right;
+}
+
+.confirmUpload {
+  margin-top:15px;
+}
+.file_dl {
+  display: inline-block;
+  padding-bottom: 30px;
+  width:100%;
+}
+.progressBar2 {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  overflow: hidden;
+}
+
+.statusBarUpload {
+  display: inline-block;
+  vertical-align: top;
+  width: 160px;
+  overflow: hidden;
+}
+
+.fileSize {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}

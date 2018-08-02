@@ -1,0 +1,409 @@
+//-------------------------------------- SEARCH
+
+.search-wrapper {
+  position:relative;
+  margin-bottom:1em;
+}
+
+.filter-search {
+  width: 40px;
+  height: 40px;
+  border: none;
+  overflow: hidden;
+  text-indent: -5000px;
+  color: #fff;
+  background-color: #2b8cc4;
+  background-image: url(https://assets.publishing.service.gov.uk/finder-frontend/search/search-button-fe10ecb60b18fdbcdadaf0918f1761b3847bf85d9924e3ca52a0110c648cb73a.png);
+  background-repeat: no-repeat;
+  background-position: -5% 50%;
+  position: absolute;
+  box-shadow:none;
+
+  &:hover {
+    background-color:#257DAF;
+
+  }
+}
+
+#search-input {
+  width:85%;
+  height: 40px;
+  border: 1px solid $grey-2;
+  border-right: none;
+}
+
+//------------------------------------- FILTERS
+
+//.filter-clear, #history-filters .body-text {
+//  float:right;
+//}
+
+.filter-wrapper {
+  margin-bottom:1em;
+}
+
+.filter-head-container {
+  background-color: #dee0e2;
+}
+
+.filter-head {
+  z-index: 100;
+  position: relative;
+  border: none;
+  display: block;
+  width: 95%;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: -1px;
+  padding: 5px 8px;
+  background: url(https://assets.publishing.service.gov.uk/finder-frontend/components/option-select-toggle-sprite-5f8bb91ff4faf8d3dbcd46d0a4d1e90834b9b9ab3d41979068ea19fdf27529be.png) no-repeat right top;
+  font-weight: bold;
+}
+
+.options-container {
+  border: 5px solid #dee0e2;
+  position: relative;
+  background-color: #fff;
+
+  &:hover {
+    border:5px solid #BFC1C3;
+  }
+
+  &:hover .filter-head-container {
+    background: #BFC1C3;
+  }
+
+  label {
+    display: block;
+    padding: 7px;
+    border-bottom: 1px solid $grey-2;
+    cursor: pointer;
+    font-weight:normal;
+    width: 90%;
+    font-size: 0.9em;
+    margin:5px 0 0 0;
+  }
+
+  input {
+    float: left;
+    margin: 1px 4px 0 0px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.options-wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height:200px;
+
+  label:last-child {
+    border:none;
+  }
+}
+
+// ------------------------------------ STATES
+
+.status {
+  display:inline;
+
+  img {
+    width:55px;
+    margin-left:10px;
+  }
+}
+
+.deleted {
+  //background:white;
+  //border-bottom:1px solid $grey-3;
+  //color:$grey-1;
+  .status {
+    //color:$grey-1;
+  }
+}
+.completed {
+  
+}
+.progress {
+  //color:$grey-1;
+
+  .busy {
+  
+    display:inline;
+
+    span {
+      font-weight:bold;
+      margin-right:0.125em;
+      animation-name: blink;
+      animation-duration: 1.4s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+
+    span:nth-child(2) {
+      animation-delay: .2s;
+    }
+
+    span:nth-child(3) {
+      animation-delay: .4s;
+    }
+  }
+}
+
+.problem {
+
+  background-color:$warning-background-color !important;
+
+  .status {
+    color:$error-colour;
+  }
+}
+
+// ------------------------------------ DATA 
+
+.panel.result {
+  border:0 none;
+  background-color:$grey-4;
+  dl.results {
+    width:100%;
+
+    div {
+      clear:both;
+    }
+
+    dt {
+      width: 25%;
+      float:left;
+      margin-bottom:0.25em
+    }
+
+    dd {
+      display:inline;
+      float:left;
+      margin-bottom: 0.25em;
+
+      &.date {
+        width:70%;
+      }
+    }
+  }
+
+  hr {
+    margin-bottom:15px;
+  }
+}
+
+
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.busy {
+  
+  display:inline;
+
+  span {
+    font-weight:bold;
+    margin-right:0.125em;
+    animation-name: blink;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+
+  span:nth-child(2) {
+    animation-delay: .2s;
+  }
+
+  span:nth-child(3) {
+    animation-delay: .4s;
+  }
+}
+
+.progress-bar-wrapper {
+  border:2px solid #333;
+  background:#fff;
+  height:1em;
+  margin-bottom: 0.25em;
+}
+
+.progress-bar {
+  background:$blue;
+  height: 1em;
+  width:66%;
+}
+
+.checklist {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  li {
+    margin: 0px;
+    padding: 0;
+    line-height: 1em;
+    float: left;
+    margin-right: 0.1em;
+    display:inline;
+    font-size:1em;
+    border:2px solid #000;
+    padding:5px 7px 3px 7px;
+    background:#fff;
+
+    &:after {
+      //content: " ▸"
+    }
+
+    &:first-child {
+      font-weight:normal;
+      color:#999;
+      //font-size:0.75em;
+      //padding-top:2px;
+      border:none;
+      background:none;
+    }
+
+    &:last-child {
+      font-weight:normal;
+      color:#999;
+      //font-size:0.75em;
+      //padding-top:2px;
+      border:none;
+      background:none;
+
+      &:after {
+        content: ""
+      }
+    }
+  }
+}
+
+.checklist2 {
+  margin:0;
+  padding:0;
+  list-style:none;
+
+  li {
+    margin: 0px;
+    padding: 0;
+    line-height: 1em;
+    float: left;
+    margin-right: 0.2em;
+    display:inline;
+    font-size:1em;
+
+    &:before {
+      content: "▸ "
+    }
+
+    &:first-child {
+      font-weight:normal;
+      //color:#999;
+
+      &:before {
+        content: ""
+      }
+    }
+
+    &:last-child {
+      font-weight:normal;
+      color:#999;
+
+    }
+  }
+}
+
+// ------------------------------------ PAGINATION
+
+.pager {
+  overflow:auto;
+  margin:1em 0;
+  padding:1em 0;
+  border-top:1px solid $grey-2;
+}
+
+.pager__summary {
+    float: left;
+}
+
+.pager__controls {
+    float: right;
+}
+
+.pager__items {
+  display: inline;
+  
+  li {
+    display: inline;
+    margin: 0 5px;
+    font-weight:bold;
+
+    a {
+      font-weight:normal;
+    }
+
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.pager__next, .pager__prev {
+    margin-right: 10px;
+}
+
+.pager__next {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+// ------------------------------------ SHARE DATA
+
+.info-forward li {
+  margin:1em 0;
+  display: inline;
+  margin-right: 1em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+// ------------------------------------ RESPONSIVE
+
+@media (min-width: 641px) {
+  .logged-in-status {
+      padding: 4px 0;
+  }
+
+  .organisation-logo p {
+    font: 18px/22px Helvetica, Arial;
+    margin:0;
+  }
+}
+
+// ------------------------------------ PRINT
+
+
+@media print {
+  #global-header .header-proposition a.menu, #proposition-link, .phase-banner, .breadcrumbs, #history-filters, .info-forward, .pager, .panel.result hr {display:none;}
+  .column-two-thirds {width:100%}
+  .panel.result {border-bottom:1px solid #ccc;} 
+  .panel dl.results {width: 100%;}
+  .panel dl.results div {clear: both;margin-bottom:2em}
+  .panel dl.results dt {width: 25%;float: left;margin-bottom: 0.25em;}
+  .panel dl.results dd {display: inline;float: left;margin-bottom: 0.25em;}
+  .busy {display:inline;}
+  .guidance {margin-bottom: 2em;}
+}

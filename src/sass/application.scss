@@ -1,0 +1,29 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/assets/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+//@import 'govuk-elements';
+@import 'modules/variables';
+
+// Font stack added
+@import 'modules/fonts';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+//@import 'patterns/check-your-answers';
+//@import 'patterns/task-list';
+//@import 'patterns/card';
+//@import 'patterns/flexbox';
+
+@import 'assets/application';
+
+@import 'modules/cta';
+@import 'modules/draganddrop';
+@import 'modules/progress';
+@import 'modules/sidebar';
+@import 'modules/upload';
+@import 'modules/general';
+@import 'modules/history';
+@import 'modules/iecompatibility';
+@import 'modules/overrides';

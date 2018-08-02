@@ -1,0 +1,171 @@
+/*** State One - Default ***/
+.file-list__file {
+  border: 1px solid #cdcfd0;
+  padding: 1em;
+  font-size: 16px;
+  margin-bottom: 0.75em;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+
+  div {
+    display: table-cell;
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+}
+
+.file-list__name {
+  width: 70%;
+}
+
+.file-list__size {
+  width: 15%;
+}
+
+.file-list__action {
+  text-align: right;
+  width: 15%;
+
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.file-list__status {
+  float: right;
+}
+/*** State Two - Error ***/
+.file-list__file-error {
+  border: 3px solid #df3034;
+
+  div {
+    display: inline-block;
+  }
+
+  .file-list__status {
+    padding-top: 0.5em;
+    color: #df3034;
+    float: left;
+    text-align: left;
+    width: 80%;
+  }
+}
+/*** State Three - Uploading ***/
+.file-list__uploading {
+  div {
+    display: inline-block;
+  }
+
+  .file-list__name {
+    width: 80%;
+  }
+
+  .file-list__size {
+    width: 20%;
+    padding: 0.25em 0;
+    text-align: right;
+  }
+
+  .file-list__action {
+    padding: 0.25em 0;
+    float: right;
+  }
+
+  .file-list__status {
+    padding: 0.25em 0;
+    float: left;
+    text-align: left;
+    width: 80%;
+  }
+
+  .file-list__progress-bar {
+    width: 100%;
+
+    progress {
+      width: 100%;
+      height: .8em;
+    }
+  }
+}
+
+/*** State Three - Failed ***/
+.file-list__failed {
+  border: 3px solid #df3034;
+
+  div {
+    display: inline-block;
+  }
+
+  .file-list__status {
+    padding-top: 0.5em;
+    color: #df3034;
+    float: left;
+    text-align: left;
+    width: 80%;
+  }
+  div {
+    display: inline-block;
+  }
+
+  .file-list__name {
+    width: 80%;
+  }
+
+  .file-list__size {
+    width: 20%;
+    padding: 0.25em 0;
+    text-align: right;
+  }
+
+  .file-list__action {
+    padding: 0.25em 0;
+    float: right;
+  }
+
+  .file-list__status {
+    padding: 0.25em 0;
+    float: left;
+    text-align: left;
+    width: 80%;
+  }
+
+}
+
+/*** RED LINK ***/
+.govuk-inset-text {
+  #failed {
+    color:#df3034;
+  }
+}
+/*** State Four - Cancelled ***/
+.file-list__cancelled {
+  div {
+    display: inline-block;
+  }
+
+  .file-list__name {
+    width: 80%;
+  }
+
+  .file-list__size {
+    width: 20%;
+    padding: 0.25em 0;
+    text-align: right;
+  }
+
+  .file-list__action {
+    padding: 0.25em 0;
+    float: right;
+  }
+
+  .file-list__status {
+    padding: 0.25em 0;
+    float: left;
+    text-align: left;
+    width: 80%;
+  }
+
+
+}

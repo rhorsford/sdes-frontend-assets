@@ -1,0 +1,72 @@
+//General Override stylesheet
+
+#footer {
+
+  border-top: 10px solid #005ea5;
+
+}
+
+
+.content__body {
+  p {
+    font-family: "nta", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 1.3157894737;
+    font-weight: 400;
+    text-transform: none;
+    margin: .6315789474em 0;
+  }
+}
+
+.centered-content {
+  .service-info {
+    border-top: 0;
+  }
+}
+
+details {
+  margin: .7894736842em 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+h1, .h1-heading {
+  margin-top: .4210526316em;
+  margin-bottom: .6315789474em;
+}
+
+// HMRC Design System
+
+.govuk-related-items {
+  margin-top: $gutter;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+body {
+
+  .js-enabled, .js-visible {
+    display: none;
+  }
+
+  .js-hidden {
+    display: block;
+  }
+
+  &.js-enabled {
+    .js-enabled, .js-visible {
+      display: block;
+    }
+  }
+}
